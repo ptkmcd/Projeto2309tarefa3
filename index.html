@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Figura com Símbolos</title>
+</head>
+<body>
+    <input type="button" value="Exibir Figura" onclick="exibirFigura()" />
+    <pre id="figura">
+    </pre>
+    <script>
+        function exibirFigura() {
+            const figuraElement = document.getElementById("figura");
+            figuraElement.innerHTML = ""; // Limpar figura para reiniciar
+
+            // Número de linhas desejado
+            const numeroLinhas = 4;
+            const simbolo = "#";
+
+            // Loop externo para controlar o número de linhas
+            for (let i = 1; i <= numeroLinhas; i++) {
+                let linha = '';
+
+                // Loop interno para imprimir o símbolo na linha atual
+                for (let j = 1; j <= 5; j++) {
+                    linha += simbolo;
+                }
+
+                // Adicione a linha atual à figura
+                figuraElement.innerHTML += linha + "\n";
+            }
+        }
+    </script>
+</body>
+</html>
